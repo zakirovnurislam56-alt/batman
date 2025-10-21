@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Банер</title>
+  <style>
+    body {
+      background: url(./обои) no-repeat center/cover;
+      height: 100vh;
+      position: relative;
+      color: white;
+    }
+    .container {
+      width: 70%;
+      height: 450px;
+      display: flex;
+      justify-content: center;
+      gap: 10px;
+      padding: 50px;
+      margin: 100px auto 0;
+    }
+    .container img {
+      width: 10%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: 10px;
+      transition: all ease-in-out 0.5s;
+    }
+    .container img:hover {
+      width: 25%;
+      box-shadow: 0 0 80px 30px rgba(136, 78, 78, 0.7);
+    }
+    header {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 40px;
+      padding: 20px;
+      letter-spacing: 10px;
+      word-spacing: 20px;
+      font-size: 20px;
+    }
+    header a {
+      text-decoration: none;
+      color: white;
+      transition: all ease-in-out 0.5s;
+    }
+    header a:hover {
+      color: rgb(197, 40, 40);
+      font-size: 28px;
+    }
+    .lang-buttons button {
+      margin-left: 10px;
+      padding: 5px 8px;
+      border: none;
+      background: rgb(95, 0, 0);
+      color: white;
+      border-radius: 5px;
+      cursor: pointer;
+      font-weight: 600;
+      width: 80px;
+    }
+  .lang-buttons button:hover{
+  background: rgb(141, 0, 0);
+  box-shadow: 0 0 15px 3px rgba(141, 0, 0, 0.7);
+}
+.card {
+  background-color: rgba(156, 49, 49, 0.2);
+  backdrop-filter: blur(10px);
+  margin: 50px auto;
+  height: auto;
+  width: 1000px;
+  border-radius: 10px;
+  text-align: center;
+  box-shadow: 0 0 20px rgba(211, 100, 100, 0.438);
+  padding: 7px;
+}
+
+    h3{
+      padding-top: 10px;
+      text-align: center;
+      word-spacing: 5px;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <nav>
+      <a href="#">TO-BECOME-BATMAN</a>
+      <a href="#">OUR-SERVICES</a>
+      <a href="#">CONTACTS</a>
+      <a href="#">HELP</a>
+    </nav>
+    <div class="lang-buttons">
+      <button onclick="setLang('ky')">Кырг</button>
+      <button onclick="setLang('ru')">Рус</button>
+      <button onclick="setLang('en')">Eng</button>
+    </div>
+  </header>
+
+  <div class="container">
+    <img src="./бетмен1.lnk">
+    <img src="./бетмен2">
+    <img src="./бетмен4">
+    <img src="./бетмен5">
+    <img src="./бетмен6">
+    <img src="./бетменАБСАЛЮТ">
+    <img src="./бетменАБСАЛЮТ2">
+    <img src="./бетменДЖОКЕР">
+  </div>
+
+  <div class="cards">
+    <div class="card">
+      <h3>Бэтмен — вымышленный супергерой из вселенной **DC Comics**, настоящее имя<br> — **Брюс Уэйн**. Он — богатый бизнесмен из Готэм-Сити, который в детстве стал свидетелем убийства своих родителей. Поклявшись бороться с преступностью, Брюс посвятил жизнь тренировкам, овладению науками и боевыми искусствами.
+
+Не обладая сверхспособностями, он использует интеллект, физическую подготовку, технологии и страх, чтобы защищать Готэм как **Бэтмен** — «Тёмный Рыцарь». Его главные враги — Джокер, Пингвин, Двуликий и другие.
+</h3>
+    </div>
+
+  <script>
+    const texts = {
+      ky: {
+        home: "БЕТМЕН-БОЛУУ",
+        about: "Биз жөнүндө",
+        contact: "Байланыш",
+        help: "Жардам"
+      },
+      ru: {
+        home: "СТАТЬ БЭТМЕНОМ",
+        about: "О нас",
+        contact: "Контакты",
+        help: "Помощь"
+      },
+      en: {
+        home: "TO-BECOME-BATMAN",
+        about: "OUR-SERVICES",
+        contact: "CONTACTS",
+        help: "HELP"
+      }
+    };
+
+    function setLang(lang) {
+      const links = document.querySelectorAll("nav a");
+      links[0].innerText = texts[lang].home;
+      links[1].innerText = texts[lang].about;
+      links[2].innerText = texts[lang].contact;
+      links[3].innerText = texts[lang].help;
+    }
+  </script>
+
+</body>
+</html>
